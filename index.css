@@ -1,0 +1,62 @@
+*{
+    margin:3vh;
+}
+h1{
+    background-color: greenyellow;
+    border-radius: 2vh;
+    text-align: center;
+    font-family: cursive,'Times New Roman', Times, serif;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+img{
+    height:30vh;
+    width: 30vh;
+    border: 1vh solid whitesmoke;
+    border-radius: 3vh;
+    box-shadow: rgb(38, 57, 77) 0vh 2.5vh 3.8vh -1.2vh;
+}
+/* 
+img:hover{
+    transform: scale(1.1);
+    transition-duration: 1s;
+} */
+
+.footer{
+    background-color: greenyellow;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction:row-reverse;
+}
+h2{
+    position: relative;
+    left:100vh;
+    background-color: greenyellow;
+    display: inline;
+    bottom: -12.5vh;
+}
+.footer a{
+    background-color: greenyellow;
+}
+
+.footer i{
+    background-color: greenyellow;
+}
+
+#linkedin{
+    color: #0077b5;
+}
+
+#instagram{
+    color:#C13584;
+}
+
+#github{
+    color:black;
+}

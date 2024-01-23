@@ -1,0 +1,1122 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./picture.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      /* *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      } */
+      img {
+        height: 30vh;
+        width: 30vh;
+        border: 1vh solid whitesmoke;
+        border-radius: 3vh;
+        box-shadow: rgb(38, 57, 77) 0vh 2.5vh 3.8vh -1.2vh;
+      }
+      button {
+        border-radius: 3vh;
+        color: white;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .modal img{
+        width: 50vh;
+        height: 50vh;
+      }
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 200ms ease-in-out;
+        border-radius: 10px;
+        z-index: 10;
+        width: 50vh;
+        max-width: 80%;
+      }
+
+      .modal.active {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      .modal-header {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+      }
+
+      .modal-header .close-button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 3rem;
+        font-weight: bold;
+        color: greenyellow;
+      }
+
+      #overlay {
+        position: fixed;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        pointer-events: none;
+        transition: 200ms ease-in-out;
+      }
+
+      #overlay.active {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      img:hover{
+    transform: scale(1.1);
+    transition-duration: 1s;
+  }
+
+      h1{
+    background-color: greenyellow;
+    border-radius: 2vh;
+    text-align: center;
+    font-family: cursive,'Times New Roman', Times, serif;
+  }
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3vh;
+}
+
+button i{
+  color: greenyellow;
+  font-size: 1.5rem;
+}
+
+.head{
+  margin: 3vh;
+}
+
+.items{
+  margin: 2vh;
+}
+   
+.low{
+  background-color: greenyellow;
+  border-radius: 1vh 1vh 3vh 3vh;
+  margin: 3vh;
+}
+
+.footer{
+
+    background-color: greenyellow;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    text-decoration: none;
+}
+h2{
+    font-size: 3vh;
+    font-family: cursive,'Times New Roman', Times, serif;
+    padding: 2vh;
+    
+  
+}
+.footer a{
+    background-color: greenyellow;
+    text-decoration: none;
+    font-size: 3vh;    
+    font-family: cursive,Times New Roman, Times, serif;
+
+}
+
+.footer a:hover{
+  text-decoration: underline;
+}
+
+#linkedin{
+    color: #0077b5;
+}
+
+#instagram{
+    color:#C13584;
+}
+
+#github{
+    color:black;
+}
+    </style>
+  </head>
+  <body>
+  
+    <div class="head">
+      <h1>Image Gallery</h1>
+    </div>
+  <div class="active" id="overlay"></div>
+  <div class="container">
+    <div class="items">
+  <button data-modal-target="#modal"><img src="./Pics/pic (2).jpg" /></button>
+  <div class="modal active" id="modal">
+    <div class="modal-header">
+       <button><a href="./Pics/pic (2).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic (2).jpg" alt="pic" />
+    </div>
+  </div>
+  </div>
+  
+  <div class="items">
+  <button data-modal-target="#modal1"><img src="./Pics/pic.jpg" /></button>
+  <div class="modal active" id="modal1">
+    <div class="modal-header">
+       <button><a href="./Pics/pic.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic.jpg" alt="pic" />
+    </div>
+  </div>
+  </div>
+
+  <div class="items">
+  <button data-modal-target="#modal2"><img src="./Pics/pi17.jpg" /></button>
+  <div class="modal active" id="modal2">
+    <div class="modal-header">
+       <a href="./Pics/pi17.jpg" download="picture"><button><i class="fa fa-download"></i></button></a>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pi17.jpg" alt="pic" />
+    </div>
+  </div>
+  </div>
+
+  <div class="items">
+  <button data-modal-target="#modal3"><img src="./Pics/pic (3).jpg" /></button>
+  <div class="modal active" id="modal3">
+    <div class="modal-header">
+       <button><a href="./Pics/pic (3).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic (3).jpg" alt="pic" />
+    </div>
+  </div>
+  </div>
+
+  <div class="items">
+  <button data-modal-target="#modal4"><img src="./Pics/pic(2).jpg" /></button>
+  <div class="modal active" id="modal4">
+    <div class="modal-header">
+       <button><a href="./Pics/pic(2).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic(2).jpg" alt="pic" />
+    </div>
+  </div>
+  </div>
+
+  <div class="items">
+  <button data-modal-target="#modal5"><img src="./Pics/pic(4).jpg" /></button>
+  <div class="modal active" id="modal5">
+    <div class="modal-header">
+       <button><a href="./Pics/pic(4).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic(4).jpg" alt="pic" />
+    </div>
+  </div>
+  </div>
+
+  <div class="items">
+  <button data-modal-target="#modal6"><img src="./Pics/pic0.jpg" /></button>
+  <div class="modal active" id="modal6">
+    <div class="modal-header">
+       <button><a href="./Pics/pic0.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic0.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal7"><img src="./Pics/pic1.jpg" /></button>
+  <div class="modal active" id="modal7">
+    <div class="modal-header">
+       <button><a href="./Pics/pic1.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic1.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal8"><img src="./Pics/pic10 (2).jpg" /></button>
+  <div class="modal active" id="modal8">
+    <div class="modal-header">
+       <button><a href="./Pics/pic10 (2).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic10 (2).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal9"><img src="./Pics/pic10.jpg" /></button>
+  <div class="modal active" id="modal9">
+    <div class="modal-header">
+       <button><a href="./Pics/pic10.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic10.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal10"><img src="./Pics/pic12 (2).jpg" /></button>
+  <div class="modal active" id="modal10">
+    <div class="modal-header">
+       <button><a href="./Pics/pic12 (2).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic12 (2).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal11"><img src="./Pics/pic12.jpg" /></button>
+  <div class="modal active" id="modal11">
+    <div class="modal-header">
+       <button><a href="./Pics/pic12.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic12.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal12"><img src="./Pics/pic13.jpg" /></button>
+  <div class="modal active" id="modal12">
+    <div class="modal-header">
+       <button><a href="./Pics/pic13.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic13.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+
+<div class="items">
+  <button data-modal-target="#modal13"><img src="./Pics/pic14.jpg" /></button>
+  <div class="modal active" id="modal13">
+    <div class="modal-header">
+       <button><a href="./Pics/pic14.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic14.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal14"><img src="./Pics/pic15.jpg" /></button>
+  <div class="modal active" id="modal14">
+    <div class="modal-header">
+       <button><a href="./Pics/pic15.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic15.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal15"><img src="./Pics/pic16.jpg" /></button>
+  <div class="modal active" id="modal15">
+    <div class="modal-header">
+       <button><a href="./Pics/pic16.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic16.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal16"><img src="./Pics/pic17.jpg" /></button>
+  <div class="modal active" id="modal16">
+    <div class="modal-header">
+       <button><a href="./Pics/pic17.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic17.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal17"><img src="./Pics/pic18.jpg" /></button>
+  <div class="modal active" id="modal17">
+    <div class="modal-header">
+       <button><a href="./Pics/pic18.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic18.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal18"><img src="./Pics/pic19.jpg" /></button>
+  <div class="modal active" id="modal18">
+    <div class="modal-header">
+       <button><a href="./Pics/pic19.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic19.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal19"><img src="./Pics/pic3.jpg" /></button>
+  <div class="modal active" id="modal19">
+    <div class="modal-header">
+       <button><a href="./Pics/pic3.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic3.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal20"><img src="./Pics/pic4.jpg" /></button>
+  <div class="modal active" id="modal20">
+    <div class="modal-header">
+       <button><a href="./Pics/pic4.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic4.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal21"><img src="./Pics/pic5.jpg" /></button>
+  <div class="modal active" id="modal21">
+    <div class="modal-header">
+       <button><a href="./Pics/pic5.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic5.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal22"><img src="./Pics/pic6.jpg" /></button>
+  <div class="modal active" id="modal22">
+    <div class="modal-header">
+       <button><a href="./Pics/pic6.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic6.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal23"><img src="./Pics/pic7.jpg" /></button>
+  <div class="modal active" id="modal23">
+    <div class="modal-header">
+       <button><a href="./Pics/pic7.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic7.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal24"><img src="./Pics/pic9.jpg" /></button>
+  <div class="modal active" id="modal24">
+    <div class="modal-header">
+       <button><a href="./Pics/pic9.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic9.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal25"><img src="./Pics/pics (10).jpg" /></button>
+  <div class="modal active" id="modal25">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (10).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (10).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal26"><img src="./Pics/piclast.jpg" /></button>
+  <div class="modal active" id="modal26">
+    <div class="modal-header">
+       <button><a href="./Pics/piclast.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/piclast.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal27"><img src="./Pics/pics (11).jpg" /></button>
+  <div class="modal active" id="modal27">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (11).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (11).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal28"><img src="./Pics/pics (12).jpg" /></button>
+  <div class="modal active" id="modal28">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (12).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (12).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal29"><img src="./Pics/pics (13).jpg" /></button>
+  <div class="modal active" id="modal29">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (13).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (13).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal30"><img src="./Pics/pics (14).jpg" /></button>
+  <div class="modal active" id="modal30">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (14).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (14).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal31"><img src="./Pics/pics (15).jpg" /></button>
+  <div class="modal active" id="modal31">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (15).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (15).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal32"><img src="./Pics/pics (16).jpg" /></button>
+  <div class="modal active" id="modal32">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (16).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (16).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal33"><img src="./Pics/pics (17).jpg" /></button>
+  <div class="modal active" id="modal33">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (17).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (17).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal34"><img src="./Pics/pics (18).jpg" /></button>
+  <div class="modal active" id="modal34">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (18).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (18).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal35"><img src="./Pics/pics (19).jpg" /></button>
+  <div class="modal active" id="modal35">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (19).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (19).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal36"><img src="./Pics/pics (20).jpg" /></button>
+  <div class="modal active" id="modal36">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (20).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (20).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal37"><img src="./Pics/pics (21).jpg" /></button>
+  <div class="modal active" id="modal37">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (21).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (21).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal38"><img src="./Pics/pics (22).jpg" /></button>
+  <div class="modal active" id="modal38">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (22).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (22).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal39"><img src="./Pics/pics (23).jpg" /></button>
+  <div class="modal active" id="modal39">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (23).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (23).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal40"><img src="./Pics/pics (24).jpg" /></button>
+  <div class="modal active" id="modal40">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (24).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (24).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal41"><img src="./Pics/pics (25).jpg" /></button>
+  <div class="modal active" id="modal41">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (25).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (25).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal42"><img src="./Pics/pics (3).jpg" /></button>
+  <div class="modal active" id="modal42">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (3).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (3).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+
+<div class="items">
+  <button data-modal-target="#modal43"><img src="./Pics/pics (4).jpg" /></button>
+  <div class="modal active" id="modal43">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (4).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (4).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal44"><img src="./Pics/pics (5).jpg" /></button>
+  <div class="modal active" id="modal44">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (5).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (5).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal45"><img src="./Pics/pics (6).jpg" /></button>
+  <div class="modal active" id="modal45">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (6).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (6).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal46"><img src="./Pics/pics (7).jpg" /></button>
+  <div class="modal active" id="modal46">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (7).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (7).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal47"><img src="./Pics/pics (8).jpg" /></button>
+  <div class="modal active" id="modal47">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (8).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (8).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal48"><img src="./Pics/pics (9).jpg" /></button>
+  <div class="modal active" id="modal48">
+    <div class="modal-header">
+       <button><a href="./Pics/pics (9).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics (9).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal49"><img src="./Pics/pics.jpg" /></button>
+  <div class="modal active" id="modal49">
+    <div class="modal-header">
+       <button><a href="./Pics/pics.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal50"><img src="./Pics/pics1.jpg" /></button>
+  <div class="modal active" id="modal50">
+    <div class="modal-header">
+       <button><a href="./Pics/pics1.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics1.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal51"><img src="./Pics/pics11.jpg" /></button>
+  <div class="modal active" id="modal51">
+    <div class="modal-header">
+       <button><a href="./Pics/pics11.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pics11.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal52"><img src="./Pics/picz (10).jpg" /></button>
+  <div class="modal active" id="modal52">
+    <div class="modal-header">
+       <button><a href="./Pics/picz (10).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz (10).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal53"><img src="./Pics/picz (11).jpg" /></button>
+  <div class="modal active" id="modal53">
+    <div class="modal-header">
+       <button><a href="./Pics/picz (11).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz (11).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal54"><img src="./Pics/picz (2).jpg" /></button>
+  <div class="modal active" id="modal54">
+    <div class="modal-header">
+       <button><a href="./Pics/picz (2).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz (2).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal55"><img src="./Pics/picz (3).jpg" /></button>
+  <div class="modal active" id="modal55">
+    <div class="modal-header">
+       <button><a href="./Pics/picz (3).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz (3).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="items">
+  <button data-modal-target="#modal56"><img src="./Pics/picz (4).jpg" /></button>
+  <div class="modal active" id="modal56">
+    <div class="modal-header">
+       <button><a href="./Pics/picz (4).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz (4).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal57"><img src="./Pics/picz (5).jpg" /></button>
+  <div class="modal active" id="modal57">
+    <div class="modal-header">
+       <button><a href="./Pics/picz (5).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz (5).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal58"><img src="./Pics/picz (6).jpg" /></button>
+  <div class="modal active" id="modal58">
+    <div class="modal-header">
+       <button><a href="./Pics/picz (6).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz (6).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal59"><img src="./Pics/picz (7).jpg" /></button>
+  <div class="modal active" id="modal59">
+    <div class="modal-header">
+       <button><a href="./Pics/picz (7).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz (7).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal60"><img src="./Pics/picz (8).jpg" /></button>
+  <div class="modal active" id="modal60">
+    <div class="modal-header">
+       <button><a href="./Pics/picz (8).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz (8).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal61"><img src="./Pics/picz (9).jpg" /></button>
+  <div class="modal active" id="modal61">
+    <div class="modal-header">
+       <button><a href="./Pics/picz (9).jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz (9).jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal62"><img src="./Pics/picz.jpg" /></button>
+  <div class="modal active" id="modal62">
+    <div class="modal-header">
+       <button><a href="./Pics/picz.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/picz.jpg" alt="pic" />
+    </div>
+  </div>
+</div>
+
+
+<div class="items">
+  <button data-modal-target="#modal63"><img src="" /></button>
+  <div class="modal active" id="modal63">
+    <div class="modal-header">
+       <button><a href="" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="" alt="pic" />
+    </div>
+  </div>
+</div>
+</div>
+<div class="low">
+<h2>Contact Me</h2>
+    <div class="footer">
+        <a href="https://www.linkedin.com/in/tilesh-t-k-764a03248/" target="_blank" id="linkedin">
+            Linked In
+        </a>
+        <a href="https://github.com/Hselit" target="_blank" id="github">
+            Github
+        </a>
+        <a href="https://www.instagram.com/_shutter_bug__06/" target="_blank" id="instagram">
+            Instagram
+        </a>
+    </div>
+</div>
+
+  <script>
+    const openmodelButton = document.querySelectorAll("[data-modal-target]");
+    const closemodelButton = document.querySelectorAll("[data-close-button]");
+    const overlay = document.getElementById("overlay");
+    const m = document.querySelectorAll('.modal');
+    m.forEach(mo=>{
+      closeModal(mo);
+    });
+
+
+    openmodelButton.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+      });
+    });
+
+    overlay.addEventListener('click',()=>{
+      const modals = document.querySelectorAll('.modal.active');
+      modals.forEach(modal =>{
+        closeModal(modal);
+      });
+    });
+
+    closemodelButton.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modal = button.closest(".modal");
+        closeModal(modal);
+      });
+    });
+
+    function openModal(modal) {
+      if (modal == null) return;
+      modal.classList.add("active");
+      overlay.classList.add("active");
+    }
+
+    function closeModal(modal) {
+      modal.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  </script>
+  </body>
+</html>

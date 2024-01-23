@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Image Gallery</title>
+    <meta name="description" content="image-gallery" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="./picture.png">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+    img {
+        height: 30vh;
+        width: 30vh;
+        border-radius: 3vh;
+        box-shadow: rgb(38, 57, 77) 0vh 2.5vh 3.8vh -1.2vh;
+      }
+      button {
+        border: none;
+        border-radius: 3vh;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .modal {
+        position: fixed;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 200ms ease-in-out;
+        border-radius: 10px;
+        z-index: 10;
+        width: 50vh;
+        max-width: 80%;
+      }
+      .modal img{
+        height: 60vh;
+        width: 60vh;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+
+      .modal.active {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      .modal-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .modal-header .close-button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 2rem;
+        font-weight: bold;
+        color: blue;
+      }
+
+      .modal-body {
+        padding: 10px 50px;
+      }
+
+      #overlay {
+        position: fixed;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        pointer-events: none;
+        transition: 200ms ease-in-out;
+      }
+
+      #overlay.active {
+        opacity: 1;
+        pointer-events: all;
+      }
+   
+    </style>
+    </head>
+  <body>
+    <div>
+      <h1>Image Gallery</h1>
+    </div>
+    <div class="container">
+        
+  <button data-modal-target="#modal"><img src="./Pics/pic.jpg" /></button>
+  <div class="modal active" id="modal">
+    <div class="modal-header">
+       <button><a href="./Pics/pic.jpg" download="picture"><i class="fa fa-download"></i></a></button>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img id="img1" src="./Pics/pic.jpg" alt="pic" />
+    </div>
+  </div>
+        <img src="./Pics/pic.jpg" alt="pic"/>
+        <img src="./Pics/pic (2).jpg" alt="" />
+        <img src="./Pics/pic (3).jpg" alt="" />
+        <img src="./Pics/pic(2).jpg" alt="" />
+        <img src="./Pics/pi17.jpg" alt="" />
+        <img src="./Pics/pic12.jpg" alt="" />
+        <img src="./Pics/pic10.jpg" alt="" />
+        <img src="./Pics/pic(4).jpg" alt="" />
+        <img src="./Pics/pic0.jpg" alt="" />        
+        <img src="./Pics/pic1.jpg" alt="" />        
+        <img src="./Pics/pic10 (2).jpg" alt="" />        
+        <img src="./Pics/pic12 (2).jpg" alt="" />        
+        <img src="./Pics/pic13.jpg" alt="" />        
+        <img src="./Pics/pic14.jpg" alt="" />        
+        <img src="./Pics/pic15.jpg" alt="" />        
+        <img src="./Pics/pic16.jpg" alt="" />        
+        <img src="./Pics/pic17.jpg" alt="" />        
+        <img src="./Pics/pic18.jpg" alt="" />        
+        <img src="./Pics/pic19.jpg" alt="" />        
+        <img src="./Pics/pic3.jpg" alt="" />        
+        <img src="./Pics/pic4.jpg" alt="" />        
+        <img src="./Pics/pics (10).jpg" alt="" />        
+        <img src="./Pics/pics (11).jpg" alt="" />        
+        <img src="./Pics/pics (12).jpg" alt="" />        
+        <img src="./Pics/pics (13).jpg" alt="" />        
+        <img src="./Pics/pics (14).jpg" alt="" />        
+        <img src="./Pics/pics (16).jpg" alt="" />        
+        <img src="./Pics/pics (15).jpg" alt="" />        
+        <img src="./Pics/pics (17).jpg" alt="" />        
+        <img src="./Pics/pics (18).jpg" alt="" />        
+        <img src="./Pics/pics (19).jpg" alt="" />        
+        <img src="./Pics/pics (2).jpg" alt="" />        
+        <img src="./Pics/pics (20).jpg" alt="" />        
+        <img src="./Pics/pics (21).jpg" alt="" />        
+        <img src="./Pics/pics (22).jpg" alt="" />        
+        <img src="./Pics/pics (23).jpg" alt="" />        
+        <img src="./Pics/pics (24).jpg" alt="" />        
+        <img src="./Pics/pics (25).jpg" alt="" />        
+        <img src="./Pics/pics (3).jpg" alt="" />        
+        <img src="./Pics/pics.jpg" alt="" />        
+        <img src="./Pics/pics (4).jpg" alt="" />        
+        <img src="./Pics/pics (5).jpg" alt="" />        
+        <img src="./Pics/pics (9).jpg" alt="" />        
+        <img src="./Pics/pics (6).jpg" alt="" />        
+        <img src="./Pics/pics (7).jpg" alt="" />        
+        <img src="./Pics/pics (8).jpg" alt="" />        
+        <img src="./Pics/pics1.jpg" alt="" />
+        <img src="./Pics/pics11.jpg" alt="" />
+        <img src="./Pics/picz (10).jpg" alt="" />
+        <img src="./Pics/picz (11).jpg" alt="" />
+        <img src="./Pics/picz (7).jpg" alt="" />
+        <img src="./Pics/picz (8).jpg" alt="" />
+        <img src="./Pics/picz (9).jpg" alt="" />
+        <img src="./Pics/picz (6).jpg" alt="" />
+        <img src="./Pics/piclast.jpg" alt="" />
+        <img src="./Pics/picz (5).jpg" alt="" />
+        <img src="./Pics/picz (4).jpg" alt="" />        
+        <img src="./Pics/picz (3).jpg" alt="" />        
+        <img src="./Pics/picz (2).jpg" alt="" />        
+        <img src="./Pics/picz.jpg" alt="" />        
+        <img src="./Pics/" alt="" />        
+        <img src="" alt="" />        
+    </div>
+    <h2>Contact Me</h2>
+    <div class="footer">
+        <a href="https://www.linkedin.com/in/tilesh-t-k-764a03248/" target="_blank">
+            <i class="fab fa-linkedin fa-2x" id="linkedin"></i>
+        </a>
+        <a href="https://github.com/Hselit" target="_blank">
+            <i class="fab fa-github fa-2x" id="github"></i>
+        </a>
+        <a href="https://www.instagram.com/_shutter_bug__06/" target="_blank">
+            <i class="fab fa-instagram fa-2x" id="instagram"></i>
+        </a>
+    </div>
+    <div class="active" id="overlay"></div>
+    
+
+  <script>
+    const openmodelButton = document.querySelectorAll("[data-modal-target]");
+    const closemodelButton = document.querySelectorAll("[data-close-button]");
+    const overlay = document.getElementById("overlay");
+    const m = document.querySelectorAll('.modal');
+    m.forEach(mo=>{
+      closeModal(mo);
+    });
+
+
+    openmodelButton.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+      });
+    });
+
+    overlay.addEventListener('click',()=>{
+      const modals = document.querySelectorAll('.modal.active');
+      modals.forEach(modal =>{
+        closeModal(modal);
+      });
+    });
+
+    closemodelButton.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modal = button.closest(".modal");
+        closeModal(modal);
+      });
+    });
+
+    function openModal(modal) {
+      if (modal == null) return;
+      modal.classList.add("active");
+      overlay.classList.add("active");
+    }
+
+    function closeModal(modal) {
+      modal.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  </script>
+
+  </body>
+</html>

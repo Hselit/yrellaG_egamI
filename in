@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Image Gallery</title>
+    <meta name="description" content="image-gallery" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="./picture.png">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <div>
+      <h1>Image Gallery</h1>
+    </div>
+    <div class="container">
+        <img src="./Pics/pic.jpg" alt="pic"/>
+        <img src="./Pics/pic (2).jpg" alt="" />
+        <img src="./Pics/pic (3).jpg" alt="" />
+        <img src="./Pics/pic(2).jpg" alt="" />
+        <img src="./Pics/pi17.jpg" alt="" />
+        <img src="./Pics/pic12.jpg" alt="" />
+        <img src="./Pics/pic10.jpg" alt="" />
+        <img src="./Pics/pic(4).jpg" alt="" />
+        <img src="./Pics/pic0.jpg" alt="" />        
+        <img src="./Pics/pic1.jpg" alt="" />        
+        <img src="./Pics/pic10 (2).jpg" alt="" />        
+        <img src="./Pics/pic12 (2).jpg" alt="" />        
+        <img src="./Pics/pic13.jpg" alt="" />        
+        <img src="./Pics/pic14.jpg" alt="" />        
+        <img src="./Pics/pic15.jpg" alt="" />        
+        <img src="./Pics/pic16.jpg" alt="" />        
+        <img src="./Pics/pic17.jpg" alt="" />        
+        <img src="./Pics/pic18.jpg" alt="" />        
+        <img src="./Pics/pic19.jpg" alt="" />        
+        <img src="./Pics/pic3.jpg" alt="" />        
+        <img src="./Pics/pic4.jpg" alt="" />        
+        <img src="./Pics/pics (10).jpg" alt="" />        
+        <img src="./Pics/pics (11).jpg" alt="" />        
+        <img src="./Pics/pics (12).jpg" alt="" />        
+        <img src="./Pics/pics (13).jpg" alt="" />        
+        <img src="./Pics/pics (14).jpg" alt="" />        
+        <img src="./Pics/pics (16).jpg" alt="" />        
+        <img src="./Pics/pics (15).jpg" alt="" />        
+        <img src="./Pics/pics (17).jpg" alt="" />        
+        <img src="./Pics/pics (18).jpg" alt="" />        
+        <img src="./Pics/pics (19).jpg" alt="" />        
+        <img src="./Pics/pics (2).jpg" alt="" />        
+        <img src="./Pics/pics (20).jpg" alt="" />        
+        <img src="./Pics/pics (21).jpg" alt="" />        
+        <img src="./Pics/pics (22).jpg" alt="" />        
+        <img src="./Pics/pics (23).jpg" alt="" />        
+        <img src="./Pics/pics (24).jpg" alt="" />        
+        <img src="./Pics/pics (25).jpg" alt="" />        
+        <img src="./Pics/pics (3).jpg" alt="" />        
+        <img src="./Pics/pics.jpg" alt="" />        
+        <img src="./Pics/pics (4).jpg" alt="" />        
+        <img src="./Pics/pics (5).jpg" alt="" />        
+        <img src="./Pics/pics (9).jpg" alt="" />        
+        <img src="./Pics/pics (6).jpg" alt="" />        
+        <img src="./Pics/pics (7).jpg" alt="" />        
+        <img src="./Pics/pics (8).jpg" alt="" />        
+        <img src="./Pics/pics1.jpg" alt="" />
+        <img src="./Pics/pics11.jpg" alt="" />
+        <img src="./Pics/picz (10).jpg" alt="" />
+        <img src="./Pics/picz (11).jpg" alt="" />
+        <img src="./Pics/picz (7).jpg" alt="" />
+        <img src="./Pics/picz (8).jpg" alt="" />
+        <img src="./Pics/picz (9).jpg" alt="" />
+        <img src="./Pics/picz (6).jpg" alt="" />
+        <img src="./Pics/piclast.jpg" alt="" />
+        <img src="./Pics/picz (5).jpg" alt="" />
+        <img src="./Pics/picz (4).jpg" alt="" />        
+        <img src="./Pics/picz (3).jpg" alt="" />        
+        <img src="./Pics/picz (2).jpg" alt="" />        
+        <img src="./Pics/picz.jpg" alt="" />        
+        <img src="./Pics/" alt="" />        
+        <img src="" alt="" />        
+    </div>
+    <h2>Contact Me</h2>
+    <div class="footer">
+        <a href="https://www.linkedin.com/in/tilesh-t-k-764a03248/" target="_blank">
+            <i class="fab fa-linkedin fa-2x" id="linkedin"></i>
+        </a>
+        <a href="https://github.com/Hselit" target="_blank">
+            <i class="fab fa-github fa-2x" id="github"></i>
+        </a>
+        <a href="https://www.instagram.com/_shutter_bug__06/" target="_blank">
+            <i class="fab fa-instagram fa-2x" id="instagram"></i>
+        </a>
+    </div>
+  </body>
+</html>
